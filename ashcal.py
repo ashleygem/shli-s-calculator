@@ -1,10 +1,3 @@
-"""
-╔══════════════════════════════════════════════════════════╗
-║   Scientific Calculator — Ashley Gem W. Baje             ║
-║   Aesthetic: Cyberpunk Neon · 3D · Vibrant Gradients     ║
-╚══════════════════════════════════════════════════════════╝
-"""
-
 import tkinter as tk
 from tkinter import font as tkfont
 import math
