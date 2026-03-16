@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✦ Scientific Calculator — Ashley Gem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ashcal.css" />
+</head>
+<body>
+
+<!-- Error Toast -->
+<div class="error-toast" id="errorToast"></div>
+
+<div class="calc-shell">
+
+  <!-- ── Display Panel ── -->
+  <div class="display-panel" id="displayPanel">
+    <div class="title-bar">
+      <span class="title-left">✦ SCIENTIFIC CALCULATOR</span>
+      <div class="title-right-group">
+        <span class="by-label">by Ashley Gem</span>
+        <span class="mode-label" id="modeLabel">RAD</span>
+      </div>
+    </div>
+    <div class="glow-strip" id="glowStrip"></div>
+    <div class="expr-label"  id="exprLabel"></div>
+    <div class="main-display" id="mainDisplay">0</div>
+    <div class="accent-line"></div>
+  </div>
+
+  <!-- ── Button Grid ── -->
+  <div class="btn-grid">
+
+    <!-- ROW 0 -->
+    <button class="btn btn-const" data-action="pi">π</button>
+    <button class="btn btn-const" data-action="e_const">e</button>
+    <button class="btn btn-sci"   data-action="sin">sin</button>
+    <button class="btn btn-sci"   data-action="cos">cos</button>
+    <button class="btn btn-sci"   data-action="tan">tan</button>
+    <button class="btn btn-sci"   data-action="fact">x!</button>
+    <button class="btn btn-sci"   data-action="sqrt">√</button>
+    <button class="btn btn-del"   data-action="del">⌫</button>
+    <button class="btn btn-clear" data-action="clear">C</button>
+
+    <!-- ROW 1 -->
+    <button class="btn btn-sci" style="font-size:11px" data-action="asin">sin⁻¹</button>
+    <button class="btn btn-sci" style="font-size:11px" data-action="acos">cos⁻¹</button>
+    <button class="btn btn-sci" style="font-size:11px" data-action="atan">tan⁻¹</button>
+    <button class="btn btn-sci" data-action="log">log</button>
+    <button class="btn btn-sci" data-action="ln">ln</button>
+    <button class="btn btn-op"  data-action="pow">x^y</button>
+    <button class="btn btn-sci" style="font-size:11px" data-action="rnd">rnd</button>
+    <button class="btn btn-op"  data-action="lbracket">(</button>
+    <button class="btn btn-op"  data-action="rbracket">)</button>
+
+    <!-- ROW 2 -->
+    <button class="btn btn-num" data-action="digit" data-val="7">7</button>
+    <button class="btn btn-num" data-action="digit" data-val="8">8</button>
+    <button class="btn btn-num" data-action="digit" data-val="9">9</button>
+    <button class="btn btn-op"  data-action="op"    data-val="÷">÷</button>
+    <button class="btn btn-op"  data-action="mod">%</button>
+    <button class="btn btn-op"  data-action="neg">+/−</button>
+    <button class="btn btn-conv" id="convBtn" data-action="conv">RAD</button>
+
+    <!-- ROW 3 -->
+    <button class="btn btn-num" data-action="digit" data-val="4">4</button>
+    <button class="btn btn-num" data-action="digit" data-val="5">5</button>
+    <button class="btn btn-num" data-action="digit" data-val="6">6</button>
+    <button class="btn btn-op"  data-action="op"    data-val="×">×</button>
+    <button class="btn btn-op"  data-action="op"    data-val="−">−</button>
+    <button class="btn btn-op"  data-action="op"    data-val="+">+</button>
+    <button class="btn btn-eq"  data-action="eq">=</button>
+
+    <!-- ROW 4 -->
+    <button class="btn btn-num" data-action="digit" data-val="1">1</button>
+    <button class="btn btn-num" data-action="digit" data-val="2">2</button>
+    <button class="btn btn-num" data-action="digit" data-val="3">3</button>
+    <button class="btn btn-num" data-action="digit" data-val="0">0</button>
+    <button class="btn btn-num" data-action="dot">.</button>
+    <!-- History box spans 4 columns -->
+    <div class="history-box">
+      <div class="history-title">HISTORY</div>
+      <div class="history-content" id="historyContent">—</div>
+    </div>
+
+  </div><!-- /btn-grid -->
+</div><!-- /calc-shell -->
+
+  <script src="ashcal.js"></script>
+</body>
+</html>
